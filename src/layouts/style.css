@@ -1,0 +1,285 @@
+/* Creating addiction */
+
+#creator {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.5;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#creator input,
+#creator select {
+  background: none;
+  font-size: inherit;
+  text-align: inherit;
+  text-transform: inherit;
+  border: none;
+  border-bottom: 0.05em solid black;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+#creator input {
+  -moz-appearance: textfield;
+}
+
+#creator input.err {
+  border-bottom-color: #B00020;
+  /* From animate.css */
+  animation: shakeX 1s;
+}
+
+@keyframes shakeX {
+
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+#creator input::-webkit-inner-spin-button,
+#creator input::-webkit-outer-spin-button,
+#creator select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+#creator select {
+  background: none;
+}
+
+#creator .control {
+  display: flex;
+  justify-content: space-between;
+}
+
+#creator .control button {
+  font-size: 2em;
+  width: 2em;
+  height: 2em;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  transition: background-color 0.1s;
+}
+
+#creator .control button.cancel {
+  background-color: #ef5350;
+}
+
+#creator .control button.cancel:hover {
+  background-color: #b61827;
+}
+
+#creator .control button.cancel:active {
+  background-color: #ff867c;
+}
+
+#creator .control button.done {
+  background-color: #9ccc65;
+}
+
+#creator .control button.done:hover {
+  background-color: #6b9b37;
+}
+
+#creator .control button.done:active {
+  background-color: #cfff95;
+}
+
+/* List of addictions */
+
+#lister {
+  text-transform: uppercase;
+  font-size: 2.5em;
+}
+
+#lister .header {
+  padding: .5em 1em 0 0;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+#lister button.add {
+  font-size: inherit;
+  width: 1.6em;
+  height: 1.6em;
+  border: none;
+  border-radius: 100%;
+  padding: 0;
+  margin: 0;
+
+  align-self: flex-end;
+  background-color: #26c6da;
+  transition: background-color 0.1s;
+}
+
+#lister button.add:hover {
+  background-color: #0095a8;
+}
+
+#lister button.add:active {
+  background-color: #6ff9ff;
+}
+
+/* Viewing addiction */
+
+#viewer,
+#share {
+  text-align: center;
+  line-height: 1.5;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#viewer {
+  text-transform: uppercase;
+}
+
+#viewer button.cancel,
+#share button.cancel {
+  font-size: 2em;
+  width: 2em;
+  height: 2em;
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ef5350;
+}
+
+#viewer button.cancel:hover,
+#share button.cancel:hover {
+  background-color: #b61827;
+}
+
+#viewer button.cancel:active,
+#share button.cancel:active {
+  background-color: #ff867c;
+}
+
+#viewer .control {
+  border-top: 1px solid #aaa;
+}
+
+#viewer .control .header {
+  text-align: initial;
+  font-size: 1.5em;
+  text-transform: initial;
+  padding: 0.5em;
+}
+
+#viewer .control .buttons {
+  padding: 0 0.5em;
+
+  display: flex;
+}
+
+#viewer .control button {
+  font-size: 2em;
+  text-transform: inherit;
+  width: 100%;
+  border: none;
+  margin: 0;
+  padding: 0.5em;
+}
+
+#viewer .control button.no {
+  background-color: #ec407a;
+}
+
+#viewer .control button.no:hover {
+  background-color: #b4004e;
+}
+
+#viewer .control button.no:active {
+  background-color: #ff77a9;
+}
+
+#viewer .control button.yes {
+  background-color: #66bb6a;
+}
+
+#viewer .control button.yes:hover {
+  background-color: #338a3e;
+}
+
+#viewer .control button.yes:active {
+  background-color: #98ee99;
+}
+
+@media only screen and (max-width: 640px) {
+  #viewer .control .buttons {
+    flex-direction: column;
+  }
+}
+
+/* Sharing */
+
+#share .content {
+  font-size: 3em;
+  text-align: justify;
+  white-space: pre-line;
+  margin: auto 0.66667em;
+}
+
+#share .buttons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#share .buttons button {
+  font-size: 2em;
+  width: 2em;
+  height: 2em;
+  border: none;
+  border-radius: 100%;
+  margin: 0.2em;
+  padding: 0;
+
+  background-color: #ff7043;
+}
+
+#share .buttons button:hover {
+  background-color: #c63f17;
+}
+
+#share .buttons button:active {
+  background-color: #ffa270;
+}

@@ -1,0 +1,271 @@
+* {
+  font-family: "Roboto", "Helvetica New", "Arial", sans-serif;
+  transition: all 0.2s ease;
+}
+
+@media only screen and (max-width: 540px) {
+  body {
+    font-size: 0.75em;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+/* main_win */
+
+html,
+body,
+#root {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.main-win-container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-win-title {
+  width: 100%;
+
+  display: flex;
+}
+
+.main-win-square {
+  padding: .75em;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-win-title {
+    justify-content: start;
+    padding-left: 10%;
+    box-shadow: 0px 1px 3px 4px #0003;
+  }
+
+  .main-win-item {
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-win-item::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main-win-square {
+    height: calc(100% - 1.5em);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main-win-title {
+    justify-content: center;
+  }
+
+  .main-win-title h1 {
+    font-size: 3em;
+    margin-block-start: 0.33em;
+    margin-block-end: 0.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+
+  .main-win-item {
+    position: relative;
+    overflow: hidden;
+    width: attr(data-width);
+    min-width: 768px;
+    height: auto;
+    box-shadow: 0px 2px 4px 3px #0003;
+  }
+
+  .main-win-item:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+  .main-win-square {
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .main-win-square::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* card */
+
+.card-view {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  font-size: 2em;
+  margin: 1em;
+  border-radius: 1em;
+  box-shadow: 1px 2px 5px 3px #0004;
+
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  transition: transform-origin 0s;
+}
+
+.card.enter {
+  /* From animate.css */
+  animation: rollIn .5s;
+}
+
+@keyframes rollIn {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.card.exit {
+  /* From animate.css */
+  animation: hinge 1s;
+  transform-origin: top left;
+}
+
+@keyframes hinge {
+  0% {
+    animation-timing-function: ease-in-out;
+  }
+
+  20%,
+  60% {
+    transform: rotate3d(0, 0, 1, 80deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  40%,
+  80% {
+    transform: rotate3d(0, 0, 1, 60deg);
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(0, 700px, 0);
+    opacity: 0;
+  }
+}
+
+.card .content {
+  margin: 1em 1em 0 1em;
+}
+
+.card button {
+  font-size: inherit;
+  width: 2em;
+  height: 2em;
+  border: none;
+  border-radius: 100%;
+  padding: 0;
+  margin: 0;
+
+  align-self: flex-end;
+  background-color: #42a5f5;
+  transition: background-color 0.1s;
+}
+
+.card button:hover {
+  background-color: #0077c2;
+}
+
+.card button:active {
+  background-color: #80d6ff;
+}
+
+/* list */
+
+.list-view {
+  padding: 0;
+}
+
+.list-item {
+  margin: 0.2em 0;
+  border: 1px solid #aaa;
+  border-radius: 0.2em;
+
+  display: flex;
+  align-items: center;
+  background-color: #fafafa;
+  transition: background-color 0.1s;
+}
+
+.list-item:hover {
+  background-color: #c7c7c7;
+}
+
+.list-item:active {
+  background-color: #ffffff;
+}
+
+.list-item::marker {
+  content: none;
+}
+
+.list-item .content {
+  padding: 0.5em;
+
+  text-align: center;
+  flex-grow: 1;
+}
+
+.list-item button.share {
+  font-size: 0.8em;
+  width: 2em;
+  height: 2em;
+  border: none;
+  border-radius: 100%;
+  margin: 0;
+  margin-right: 0.4em;
+  padding: 0;
+
+  flex-shrink: 0;
+  background-color: #ffca28;
+}
+
+.list-item button.share:hover {
+  background-color: #c79a00;
+}
+
+.list-item button.share:active {
+  background-color: #fffd61;
+}
