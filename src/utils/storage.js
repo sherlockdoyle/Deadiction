@@ -34,6 +34,7 @@ export default {
           addiction.decrementFactor *= 100 / 66;
     }
     data.version = DATA_VERSION;
+    this.saveData();
   },
 
   saveData() {
