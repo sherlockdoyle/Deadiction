@@ -1,16 +1,32 @@
 {
-  "main.css": "static/css/main.6a0a184a.css",
-  "main.css.map": "static/css/main.6a0a184a.css.map",
-  "main.js": "static/js/main.8ad7da7b.js",
-  "main.js.map": "static/js/main.8ad7da7b.js.map",
-  "static/media/add.svg": "static/media/add.e2112bfa.svg",
-  "static/media/anywhere.svg": "static/media/anywhere.2f4c9c94.svg",
-  "static/media/cancel.svg": "static/media/cancel.4aa9de9a.svg",
-  "static/media/copy.svg": "static/media/copy.6ad4d5b6.svg",
-  "static/media/facebook.svg": "static/media/facebook.55bbf859.svg",
-  "static/media/rarrow.svg": "static/media/rarrow.cac87600.svg",
-  "static/media/share.svg": "static/media/share.05e6db7f.svg",
-  "static/media/tick.svg": "static/media/tick.ffe8acbf.svg",
-  "static/media/twitter.svg": "static/media/twitter.872fcc3f.svg",
-  "static/media/whatsapp.svg": "static/media/whatsapp.781d00fa.svg"
+  "files": {
+    "main.css": "/Deadiction/static/css/main.d23800a9.chunk.css",
+    "main.js": "/Deadiction/static/js/main.742d1518.chunk.js",
+    "main.js.map": "/Deadiction/static/js/main.742d1518.chunk.js.map",
+    "runtime-main.js": "/Deadiction/static/js/runtime-main.47c30e2a.js",
+    "runtime-main.js.map": "/Deadiction/static/js/runtime-main.47c30e2a.js.map",
+    "static/js/2.f51a4272.chunk.js": "/Deadiction/static/js/2.f51a4272.chunk.js",
+    "static/js/2.f51a4272.chunk.js.map": "/Deadiction/static/js/2.f51a4272.chunk.js.map",
+    "index.html": "/Deadiction/index.html",
+    "static/css/main.d23800a9.chunk.css.map": "/Deadiction/static/css/main.d23800a9.chunk.css.map",
+    "static/js/2.f51a4272.chunk.js.LICENSE.txt": "/Deadiction/static/js/2.f51a4272.chunk.js.LICENSE.txt",
+    "static/media/add.0837f12a.svg": "/Deadiction/static/media/add.0837f12a.svg",
+    "static/media/anywhere.d01c2b01.svg": "/Deadiction/static/media/anywhere.d01c2b01.svg",
+    "static/media/cancel.3cad4f91.svg": "/Deadiction/static/media/cancel.3cad4f91.svg",
+    "static/media/copy.74285c11.svg": "/Deadiction/static/media/copy.74285c11.svg",
+    "static/media/facebook.0ca03b77.svg": "/Deadiction/static/media/facebook.0ca03b77.svg",
+    "static/media/github.62c49901.svg": "/Deadiction/static/media/github.62c49901.svg",
+    "static/media/rarrow.ea32db54.svg": "/Deadiction/static/media/rarrow.ea32db54.svg",
+    "static/media/reddit.0e964dac.svg": "/Deadiction/static/media/reddit.0e964dac.svg",
+    "static/media/share.968fb690.svg": "/Deadiction/static/media/share.968fb690.svg",
+    "static/media/tick.e9615eeb.svg": "/Deadiction/static/media/tick.e9615eeb.svg",
+    "static/media/twitter.27d98fa0.svg": "/Deadiction/static/media/twitter.27d98fa0.svg",
+    "static/media/whatsapp.3180c888.svg": "/Deadiction/static/media/whatsapp.3180c888.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.47c30e2a.js",
+    "static/js/2.f51a4272.chunk.js",
+    "static/css/main.d23800a9.chunk.css",
+    "static/js/main.742d1518.chunk.js"
+  ]
 }
