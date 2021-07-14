@@ -10,7 +10,7 @@ import reddit from '../img/reddit.svg';
 import anywhere from '../img/anywhere.svg';
 import { useLocation } from 'react-router-dom';
 
-const URL = window.location.origin;
+const URL = window.location.origin + '/Deadiction';
 
 function copyText(text) {
   navigator.clipboard.writeText(text).then(null, () => alert('Not copied :('));
