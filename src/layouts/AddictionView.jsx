@@ -1,24 +1,22 @@
 import React from 'react';
 import storage from '../utils/storage';
 import cancel from '../img/cancel.svg';
+import { useLocation } from 'react-router-dom';
 
 function AddictionView(props) {
-  let addiction = storage.getAddiction(props.addictionID)
+  const location = useLocation();
+  let addiction = storage.getAddiction(location.state.addictionID)
   let currentRatio = addiction.timesUsed === 0 ? 1 : addiction.timesUsed / addiction.timesAsked;
-  // console.log(addiction, currentRatio, addiction.acceptableRatio)
+  console.log(addiction, currentRatio, addiction.acceptableRatio)
   let canDo = currentRatio <= addiction.acceptableRatio;
 
   return <div id='viewer'>
     <button
       className='cancel'
+      title='Cancel'
       onClick={props.onCancel}
     ><img src={cancel} alt="✗" /></button>
-    <div style={{
-      fontSize: '6em',
-      fontWeight: 'bold',
-      hyphens: 'auto',
-      margin: 'auto 0.66667em'
-    }}>You <span style={{
+    <div className='content'>You <span style={{
       color: canDo ? '#002300' : '#490000'
     }}>{canDo ? 'may' : 'should not'}</span> {addiction.name}.</div>
 

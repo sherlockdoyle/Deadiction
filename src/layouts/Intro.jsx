@@ -19,7 +19,7 @@ function Intro(props) {
 
     <Card>It teaches you coping skills that might work for you, but more importantly, it motivates you. This helps keep you focused on quitting and helps motivate you to try to change.</Card>
 
-    <Card><div style={{ fontSize: '0.6em' }}>If you don't have self-determination, or you relapse with the incentives, that will be a problem. But the idea behind this approach is that you've enough determination to stop your addiction, with this app acting as a motivator.<br /><br />
+    <Card><div style={{ fontSize: '0.6em' }}>If you don't have self-determination, or you relapse with the incentives, that will be a problem. But the idea behind this approach is that you've enough <i>dedication</i> to stop your <u>addiction</u>, with <b>Deadiction</b> acting as a motivator.<br /><br />
     This is an offline app. All your data is stored in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">local storage</a>.<br /><br />
       <span style={{ fontFamily: 'serif' }}>Some addictions might need professional help. If so be the need, don't hesitate to reach out.</span><br /><br />
     And lastly, if this approach, this app, helped you, do share your experience.</div></Card>

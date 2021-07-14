@@ -24,10 +24,13 @@ function Card(props) {
     style={{ ...props.style }}
   >
     <div className="content">{props.children}</div>
-    <button onClick={() => {
-      setState('exit');
-      setTimeout(props.onNext, 1000);
-    }}><img src={rarrow} alt=">" /></button>
+    <button
+      title='Next'
+      onClick={() => {
+        setState('exit');
+        setTimeout(props.onNext, 1000);
+      }}
+    ><img src={rarrow} alt=">" /></button>
   </div>;
 }
 
