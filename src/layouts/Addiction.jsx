@@ -7,36 +7,35 @@ import CreateAddiction from './creation';
 import add from '../img/add.svg';
 import AddictionView from './AddictionView';
 import ShareView from './ShareView';
-import { Redirect, Route, Switch, useHistory, useRouteMatch } from 'react-router-dom';
+import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
 
 function Addiction() {
   let data = storage.loadData();
-  const { path, url } = useRouteMatch();
   const history = useHistory();
 
   return <Switch>
-    <Route path={`${path}/create`}>
-      <CreateAddiction onDone={() => history.replace(`${url}/list`)} />
+    <Route path='/create'>
+      <CreateAddiction onDone={() => history.replace('/list')} />
     </Route>
 
-    <Route path={`${path}/list`}>
+    <Route path='/list'>
       <ListAddiction
-        onCreate={() => history.push(`${url}/create`)}
-        onItemSelect={id => history.push(`${url}/view`, { addictionID: id })}
-        onShare={id => history.push(`${url}/share`, { addictionID: id })}
+        onCreate={() => history.push('/create')}
+        onItemSelect={id => history.push('/view', { addictionID: id })}
+        onShare={id => history.push('/share', { addictionID: id })}
       />
     </Route>
 
-    <Route path={`${path}/view`}>
+    <Route path='/view'>
       <AddictionView onCancel={history.goBack} />
     </Route>
 
-    <Route path={`${path}/share`}>
+    <Route path='/share'>
       <ShareView onCancel={history.goBack} />
     </Route>
 
-    <Route path={path}>
-      {data.addictions.length === 0 ? <Redirect to={`${url}/create`} /> : <Redirect to={`${url}/list`} />}
+    <Route path='/'>
+      {data.addictions.length === 0 ? <Redirect to='/create' /> : <Redirect to='/list' />}
     </Route>
   </Switch>;
 }

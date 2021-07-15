@@ -10,25 +10,22 @@ import storage from './utils/storage.js';
 function App() {
   let data = storage.loadData();
   let [firstTime, setFirstTime] = useState(data.firstTime);
-  let path, url = path = '/Deadiction';  // TODO: How to use useRouteMatch here?
   const history = useHistory();
 
   return <MainWin title="Deadiction">
     <Switch>
-      <Route path={`${path}/intro`}>
+      <Route path='/intro'>
         <Intro onEnd={() => {
           setFirstTime(false);
           data.firstTime = false;
           storage.saveData();
-          history.replace(url);
+          history.replace('/');
         }} />
       </Route>
 
-      <Route path={path}>
-        {firstTime ? <Redirect to={`${url}/intro`} /> : <Addiction />}
+      <Route path='/'>
+        {firstTime ? <Redirect to='/intro' /> : <Addiction />}
       </Route>
-
-      <Route path='/'><Redirect to={url} /></Route>
     </Switch>
   </MainWin>;
 }
