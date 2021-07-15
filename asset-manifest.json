@@ -1,14 +1,10 @@
 {
   "files": {
-    "main.css": "/Deadiction/static/css/main.d23800a9.chunk.css",
-    "main.js": "/Deadiction/static/js/main.02c6cc6c.chunk.js",
-    "main.js.map": "/Deadiction/static/js/main.02c6cc6c.chunk.js.map",
+    "main.css": "/Deadiction/static/css/main.6e4d00d5.chunk.css",
+    "main.js": "/Deadiction/static/js/main.5c87c7bd.chunk.js",
     "runtime-main.js": "/Deadiction/static/js/runtime-main.47c30e2a.js",
-    "runtime-main.js.map": "/Deadiction/static/js/runtime-main.47c30e2a.js.map",
     "static/js/2.f51a4272.chunk.js": "/Deadiction/static/js/2.f51a4272.chunk.js",
-    "static/js/2.f51a4272.chunk.js.map": "/Deadiction/static/js/2.f51a4272.chunk.js.map",
     "index.html": "/Deadiction/index.html",
-    "static/css/main.d23800a9.chunk.css.map": "/Deadiction/static/css/main.d23800a9.chunk.css.map",
     "static/js/2.f51a4272.chunk.js.LICENSE.txt": "/Deadiction/static/js/2.f51a4272.chunk.js.LICENSE.txt",
     "static/media/add.0837f12a.svg": "/Deadiction/static/media/add.0837f12a.svg",
     "static/media/anywhere.d01c2b01.svg": "/Deadiction/static/media/anywhere.d01c2b01.svg",
@@ -26,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.47c30e2a.js",
     "static/js/2.f51a4272.chunk.js",
-    "static/css/main.d23800a9.chunk.css",
-    "static/js/main.02c6cc6c.chunk.js"
+    "static/css/main.6e4d00d5.chunk.css",
+    "static/js/main.5c87c7bd.chunk.js"
   ]
 }
