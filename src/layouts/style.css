@@ -5,19 +5,11 @@
   line-height: 1.5;
   width: 100%;
   height: 100%;
-  /* overflow: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none; */
-  /* TODO: Why you scroll? */
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
-/* #creator::-webkit-scrollbar {
-  display: none;
-} */
 
 #creator>.content {
   text-transform: uppercase;
@@ -160,12 +152,6 @@
   font-size: 2.5em;
   height: 100%;
   overflow: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-#lister::-webkit-scrollbar {
-  display: none;
 }
 
 #lister>.header {
@@ -250,12 +236,6 @@
 #viewer {
   text-transform: uppercase;
   overflow: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-#viewer::-webkit-scrollbar {
-  display: none;
 }
 
 #viewer>.content {
