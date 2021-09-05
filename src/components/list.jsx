@@ -1,25 +1,49 @@
-import React from 'react';
-import share from '../img/share.svg';
+import React, { useRef, useState } from 'react';
+import option from '../img/option.svg';
+import progress from '../img/progress.svg'
+import delete_icon from '../img/delete.svg';
 
-function ListView(props) {
+function ListView({ children, ...props }) {
   return <ul className='list-view'>
-    {props.children}
+    {children}
   </ul>;
 }
 
-function ListItem(props) {
-  return <li
-    className='list-item'
-    onClick={props.onClick}
-  >
-    <div className='content'>{props.children}</div>
+function ListItem({ onClick, onViewProgress, onDelete, children, ...props }) {
+  let [isMenuOpen, setMenuOpen] = useState(false);
+  let menuButton = useRef();
+
+  function closeMenu(e) {
+    if (!menuButton.current?.contains(e.target)) {
+      setMenuOpen(false);
+      document.removeEventListener('click', closeMenu);
+    }
+  }
+
+  return <li className='list-item'>
+    <div
+      className='content'
+      onClick={onClick}
+    >{children}</div>
+
     <button
-      className='share'
-      onClick={(e) => {
-        props.onShare();
-        e.stopPropagation();
+      className='menu-button'
+      ref={menuButton}
+      title='Menu'
+      onClick={() => {
+        setMenuOpen(true);
+        document.addEventListener('click', closeMenu);
       }}
-    ><img src={share} alt=">" /></button>
+    ><img src={option} alt="Menu" /></button>
+
+    {isMenuOpen && <div className='menu'>
+      <button onClick={onViewProgress}>
+        <img src={progress} alt="⋯" />Progress
+      </button>
+      <button onClick={onDelete}>
+        <img src={delete_icon} alt="Delete" />Delete
+      </button>
+    </div>}
   </li>;
 }
 

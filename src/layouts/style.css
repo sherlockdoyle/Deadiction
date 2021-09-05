@@ -238,6 +238,17 @@
   overflow: scroll;
 }
 
+#viewer>.header {
+  display: flex;
+  align-items: center;
+}
+
+#viewer>.header>.lasttime {
+  font-size: 1.25em;
+  text-transform: initial;
+  margin: 0 auto;
+}
+
 #viewer>.content {
   font-size: 6em;
   font-weight: bold;
@@ -251,7 +262,7 @@
   }
 }
 
-#viewer>button.cancel,
+#viewer>.header>button.cancel,
 #share>button.cancel {
   font-size: 2em;
   width: 2em;
@@ -260,18 +271,21 @@
   margin: 0;
   padding: 0;
 
-  position: absolute;
-  top: 0;
-  left: 0;
   background-color: #ef5350;
 }
 
-#viewer>button.cancel:hover,
+#share>button.cancel {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#viewer>.header>button.cancel:hover,
 #share>button.cancel:hover {
   background-color: #b61827;
 }
 
-#viewer>button.cancel:active,
+#viewer>.header>button.cancel:active,
 #share>button.cancel:active {
   background-color: #ff867c;
 }

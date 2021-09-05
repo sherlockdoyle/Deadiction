@@ -1,5 +1,5 @@
 const KEY = 'deadiction_data';
-const DATA_VERSION = '1';
+const DATA_VERSION = '2';
 const CONV = {  // times in a day
   HOUR: 24,
   DAY: 1,
@@ -32,6 +32,9 @@ export default {
       case '0':
         for (let addiction of data.addictions)
           addiction.decrementFactor *= 100 / 66;
+      case '1':
+        for (let addiction of data.addictions)
+          addiction.lastUsed = undefined;
     }
     data.version = DATA_VERSION;
     this.saveData();
@@ -59,7 +62,8 @@ export default {
       timesAsked: 0,
       timesUsed: 0,
       timesResisted: 0,
-      timesRelapsed: 0
+      timesRelapsed: 0,
+      lastUsed: undefined
     }
     this.loadData();
     data.addictions.push(addiction);

@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import './style.css';
 import rarrow from '../img/rarrow.svg';
 
-function CardView(props) {
-  let numCards = props.children.length;  // single child fails
+function CardView({ children, onEnd, ...props }) {
+  let numCards = children.length;  // single child fails
   let [cardIdx, setCardIdx] = useState(0);
 
-  let card = React.cloneElement(props.children[cardIdx], {
+  let card = React.cloneElement(children[cardIdx], {
     key: cardIdx,
-    onNext: cardIdx === numCards - 1 ? props.onEnd : () => {
+    onNext: cardIdx === numCards - 1 ? onEnd : () => {
       setCardIdx(cardIdx + 1);
     }
   });

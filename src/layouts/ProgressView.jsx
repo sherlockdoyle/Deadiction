@@ -7,7 +7,7 @@ import whatsapp from '../img/whatsapp.svg';
 import facebook from '../img/facebook.svg';
 import twitter from '../img/twitter.svg';
 import reddit from '../img/reddit.svg';
-import anywhere from '../img/anywhere.svg';
+import share from '../img/share.svg';
 import { useLocation } from 'react-router-dom';
 
 const URL = location.origin + process.env.PUBLIC_URL;
@@ -16,7 +16,7 @@ function copyText(text) {
   navigator.clipboard.writeText(text).then(null, () => alert('Not copied :('));
 }
 
-function ShareView(props) {
+function ProgressView(props) {
   const location = useLocation();
   let adct = storage.getAddiction(location.state.addictionID);
   let text;  // TODO: Better text
@@ -91,9 +91,9 @@ I'm trying not to ${adct.name.toLowerCase()}${adct.timesResisted ? " and I've al
               url: URL
             }).catch(console.error);
         }}
-      ><img src={anywhere} alt="Anywhere" /></button>
+      ><img src={share} alt="Anywhere" /></button>
     </div>
   </div>;
 }
 
-export default ShareView;
+export default ProgressView;

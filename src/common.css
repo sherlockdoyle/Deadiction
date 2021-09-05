@@ -11,7 +11,8 @@
 
 html,
 body,
-#root {
+#root,
+#overlay {
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -19,6 +20,13 @@ body,
   margin: 0;
 }
 
+#overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
 
 @media only screen and (max-width: 540px) {
   body {
@@ -34,4 +42,8 @@ body,
 
 a {
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }

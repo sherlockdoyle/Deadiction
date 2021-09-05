@@ -1,5 +1,6 @@
 import React from 'react';
 import storage from '../utils/storage';
+import time from '../utils/time';
 import cancel from '../img/cancel.svg';
 import { useLocation } from 'react-router-dom';
 
@@ -11,11 +12,14 @@ function AddictionView(props) {
   let canDo = currentRatio <= addiction.acceptableRatio;
 
   return <div id='viewer'>
-    <button
-      className='cancel'
-      title='Cancel'
-      onClick={props.onCancel}
-    ><img src={cancel} alt="✗" /></button>
+    <div className='header'>
+      <button
+        className='cancel'
+        title='Cancel'
+        onClick={props.onCancel}
+      ><img src={cancel} alt="✗" /></button>
+      {addiction.lastUsed && <div className='lasttime'>Last used {time.humanizeTime(addiction.lastUsed)}</div>}
+    </div>
     <div className='content'>You <span style={{
       color: canDo ? '#002300' : '#490000'
     }}>{canDo ? 'may' : 'should not'}</span> {addiction.name}.</div>
@@ -30,6 +34,7 @@ function AddictionView(props) {
             addiction.timesUsed += 1;
             if (!canDo) addiction.timesRelapsed += 1
             addiction.acceptableRatio = Math.max(addiction.acceptableRatio - addiction.decrementFactor, 0);
+            addiction.lastUsed = Math.floor(new Date().getTime() / 1000);
             storage.saveData();
             props.onCancel();
           }}
@@ -40,6 +45,7 @@ function AddictionView(props) {
           onClick={() => {
             addiction.timesAsked += 1;
             if (canDo) addiction.timesResisted += 1;
+            addiction.lastUsed = Math.floor(new Date().getTime() / 1000);
             storage.saveData();
             props.onCancel();
           }}
