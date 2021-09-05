@@ -1,17 +1,21 @@
 {
   "files": {
-    "main.css": "/Deadiction/static/css/main.6e4d00d5.chunk.css",
-    "main.js": "/Deadiction/static/js/main.5c87c7bd.chunk.js",
+    "main.css": "/Deadiction/static/css/main.082bcc93.chunk.css",
+    "main.js": "/Deadiction/static/js/main.1d4e83ca.chunk.js",
     "runtime-main.js": "/Deadiction/static/js/runtime-main.47c30e2a.js",
-    "static/js/2.f51a4272.chunk.js": "/Deadiction/static/js/2.f51a4272.chunk.js",
+    "static/js/2.2dd3aa80.chunk.js": "/Deadiction/static/js/2.2dd3aa80.chunk.js",
     "index.html": "/Deadiction/index.html",
-    "static/js/2.f51a4272.chunk.js.LICENSE.txt": "/Deadiction/static/js/2.f51a4272.chunk.js.LICENSE.txt",
+    "static/js/2.2dd3aa80.chunk.js.LICENSE.txt": "/Deadiction/static/js/2.2dd3aa80.chunk.js.LICENSE.txt",
     "static/media/add.0837f12a.svg": "/Deadiction/static/media/add.0837f12a.svg",
-    "static/media/anywhere.d01c2b01.svg": "/Deadiction/static/media/anywhere.d01c2b01.svg",
     "static/media/cancel.3cad4f91.svg": "/Deadiction/static/media/cancel.3cad4f91.svg",
     "static/media/copy.74285c11.svg": "/Deadiction/static/media/copy.74285c11.svg",
+    "static/media/delete.6d81ad0b.svg": "/Deadiction/static/media/delete.6d81ad0b.svg",
+    "static/media/export.ea468444.svg": "/Deadiction/static/media/export.ea468444.svg",
     "static/media/facebook.0ca03b77.svg": "/Deadiction/static/media/facebook.0ca03b77.svg",
     "static/media/github.62c49901.svg": "/Deadiction/static/media/github.62c49901.svg",
+    "static/media/import.7ed52ecd.svg": "/Deadiction/static/media/import.7ed52ecd.svg",
+    "static/media/option.5fc64663.svg": "/Deadiction/static/media/option.5fc64663.svg",
+    "static/media/progress.b07568ed.svg": "/Deadiction/static/media/progress.b07568ed.svg",
     "static/media/rarrow.ea32db54.svg": "/Deadiction/static/media/rarrow.ea32db54.svg",
     "static/media/reddit.0e964dac.svg": "/Deadiction/static/media/reddit.0e964dac.svg",
     "static/media/share.968fb690.svg": "/Deadiction/static/media/share.968fb690.svg",
@@ -21,8 +25,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.47c30e2a.js",
-    "static/js/2.f51a4272.chunk.js",
-    "static/css/main.6e4d00d5.chunk.css",
-    "static/js/main.5c87c7bd.chunk.js"
+    "static/js/2.2dd3aa80.chunk.js",
+    "static/css/main.082bcc93.chunk.css",
+    "static/js/main.1d4e83ca.chunk.js"
   ]
 }
